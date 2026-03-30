@@ -1,0 +1,1 @@
+<h1>This text from other.php file</h1>
