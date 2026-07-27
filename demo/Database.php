@@ -21,10 +21,10 @@ class Database
         ]);
     }
 
-    public function query($queryString)
+    public function query($queryString, $params = [])
     {
         $statement = $this->connection->prepare($queryString);
-        $statement->execute();
+        $statement->execute($params);
 
         return $statement;
     }

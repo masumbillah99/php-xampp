@@ -7,10 +7,19 @@ $config = require "config.php";
 
 // connect to the databse, and execute a query.
 
-$db = new Database($config);
-$users = $db->query("select * from users")->fetchAll(PDO::FETCH_ASSOC);
+$db = new Database($config['database']);
 
-dd($users);
+
+
+// parameter check > sql injection vulnerability
+
+$id = $_GET['id'];
+
+$query = "select * from managers where id = :id";
+
+$managers = $db->query($query, [':id' => $id])->fetchAll();
+
+dd($managers);
 
 foreach ($users as $user) {
     echo "<li>" . $user['email'] . "</li>";
