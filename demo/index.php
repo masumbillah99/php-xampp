@@ -2,25 +2,25 @@
 
 require "functions.php";
 require "Database.php";
-$config = require "config.php";
+require "router.php";
 
 
-// connect to the databse, and execute a query.
-
-$db = new Database($config['database']);
+// // connect to the databse, and execute a query.
+// $config = require "config.php";
+// $db = new Database($config['database']);
 
 
 
 // parameter check > sql injection vulnerability
 
-$id = $_GET['id'];
+// $id = $_GET['id'];
 
-$query = "select * from managers where id = :id";
+// $query = "select * from managers where id = :id";
 
-$managers = $db->query($query, [':id' => $id])->fetchAll();
+// $managers = $db->query($query, [':id' => $id])->fetchAll();
 
-dd($managers);
+// dd($managers);
 
-foreach ($users as $user) {
-    echo "<li>" . $user['email'] . "</li>";
-}
+// foreach ($users as $user) {
+//     echo "<li>" . $user['email'] . "</li>";
+// }
