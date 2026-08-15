@@ -15,7 +15,7 @@
             <ul>
                 <?php foreach ($notes as $note): ?>
                     <div class="mb-3">
-                        <li><?= $note['body'] ?></li>
+                        <li><?= htmlspecialchars($note['body']) ?></li>
                         <a href="/note?id=<?= $note['id'] ?>" class="text-green-500 underline hover:no-underline">View
                             Deails</a>
                     </div>
