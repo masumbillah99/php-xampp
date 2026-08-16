@@ -1,8 +1,8 @@
-<?php require("partials/header.php") ?>
+<?php require("views/partials/header.php") ?>
 
 <div class="min-h-full">
-    <?php require("partials/nav.php") ?>
-    <?php require("partials/header-banner.php") ?>
+    <?php require("views/partials/nav.php") ?>
+    <?php require("views/partials/header-banner.php") ?>
 
 
     <!-- page content starts here -->
@@ -52,4 +52,4 @@
 <!-- page content ends here -->
 
 
-<?php require("partials/footer.php") ?>
+<?php require("views/partialsviews//footer.php") ?>
