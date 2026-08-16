@@ -20,10 +20,10 @@
 
                         <textarea name="body" id="body" rows="5"
                             class="w-full rounded-md border border-gray-300 p-3 shadow-sm focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus:outline-none"
-                            placeholder="Here's an idea for a note..."></textarea>
+                            placeholder="Here's an idea for a note..."><?= $_POST['body'] ?? '' ?></textarea>
 
                         <?php if (isset($errors['body'])): ?>
-                            <p class="text-red-500 text-xs"><?= $errors['body'] ?></p>
+                            <p class="text-red-500 text-xs font-medium"><?= $errors['body'] ?></p>
                         <?php endif ?>
 
                     </div>
